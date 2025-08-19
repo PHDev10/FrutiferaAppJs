@@ -1,1 +1,100 @@
+/* CSS do arquivo principal HTML - index.html */
 
+body {
+    background-image: url(/images/images_background/background_principal.jpg);
+    background-position: center;
+}
+
+#tituloPrincipalDaPagina {
+    font-size: 40px;
+    font-family: 'bookman';
+    font-weight: bold;
+}
+
+#barraDeNavegacao {
+    font-weight: bold;
+    margin-block-end: 70px;
+    border-style: groove;
+    border-color: rgb(179, 103, 49);
+    border-width: 15px;
+}
+
+#espacoInternoDaBarraDeNavegacao {
+    background-color: rgb(57, 213, 124);
+}
+
+#caixaDePesquisa {
+    font-weight: 100px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(0, 100, 0);
+    border-width: 2.5px;
+    outline: none;
+}
+
+#botaoDeProcurarDaBarraDeNavegacao {
+    font-weight: 100px;
+    font-weight: bold;
+    font-size: 13px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(0, 99, 0);
+    box-shadow: rgb(0, 99, 0);
+    border-width: 2.5px;
+    outline: none;
+}
+
+#carrosselDeImagens {
+    position: relative;
+    margin: auto;
+    height: 450px;
+    width: 655px;
+    overflow: hidden;
+    z-index: 5%;
+    border-style: groove;
+    border-width: 15px;
+    border-color: rgb(179, 103, 49);
+    border-radius: 6px;
+    margin-block-end: 100px;
+}
+
+.carrosselImagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hidden {
+    display: none;
+}
+
+#caixaDeTextoDoCadastroDeFruteiras {
+    border-style: groove;
+    border-color: rgb(179, 103, 49);
+    border-radius: 8px;
+    border-width: 10px;
+}
+
+#titutoDaAbaDeCadastro {
+    font-size: 30px;
+    font-family: 'bookman';
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+#titutoDaAbaDeFruteiras {
+    color: rgb(255, 255, 255);
+}
+
+#RodapeDaPaginaPrincipal {
+    border-style: groove;
+    border-width: 10px;
+    border-left: 0px;
+    border-right: 0px;
+    border-block-end: 0px;
+    border-color: rgb(179, 103, 49);
+}
+
+#espacoInternoDoRodape {
+    background-color: rgb(57, 213, 124);
+}
