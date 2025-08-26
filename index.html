@@ -12,7 +12,16 @@
 
 <body>
     <header>
-        <!-- Barra de Navegação -->
+        <!-- Barra de Navegação 
+        
+        Sintaticamente: Gera a "Barra de Navegação" - barraDeNavegacao - na página principal do sistema. É utilizado um modelo de 
+        Navbar do Bootstrap, onde os principais componentes são a "Caixa de Pesquisa" - caixaDePesquisa - e o "Botão de Busca" -
+        botaoDeProcurarDaBarraDeNavegacao. Além disso, o título da página - tituloPrincipalDaPagina - é centralizado na 
+        "Barra de Navegação" por uma "div" criada à parte, que a implementa. 
+        
+        Semanticamente: Permite que as Fruteiras e suas informações sejam facilmente encontradas, já que estão no topo da página
+        principal, sendo auto intuitivo que se trata de um "campo de busca".
+        -->
         <nav id="barraDeNavegacao" class="navbar navbar-expand-lg bg-body-tertiary">
             <div id="espacoInternoDaBarraDeNavegacao" class="container-fluid d-flex justify-content-between align-items-center">
         
@@ -32,7 +41,17 @@
         </nav>
     </header>
     
-    <!-- Carrossel -->
+    <!-- Carrossel 
+    
+    Sintaticamente: Implementa o "Carrosel de Imagens" - carrosselDeImagens - logo abaixo da "Barra de Navegação", utilizando de um
+    modelo de Carousel do Bootstrap, no qual as imagens se alternam automaticamente a cada um tempo estabelecido de segundos -
+    data-bs-ride="carousel" é o atributo do Bootstrap responsável por isso. As imagens são carregadas através dos caminhos de suas
+    localizações a partir da pasta principal do projeto - images/images_carrossel/.
+
+    Semanticamente: Ilustra imagens de Fruteiras variadas, as quais são comumente vistas na região nordeste, ambientando a proposta de
+    registro das espécies de plantas frutíferas e exemplificando tipos de imagens que podem ser utilizadas no registro de uma Fruteira
+    para visualização.
+    -->
     <div id="carrosselDeImagens" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -53,7 +72,16 @@
         </div>
     </div>
 
-    <!-- Botão de Cadastro e Explicação -->
+    <!-- Botão de Cadastro e Explicação
+    
+    Sintaticamente: Mostra uma "Caixa de Texto" - caixaDeTextoDoCadastroDeFruteiras -, contendo um texto explicativo sobre como 
+    adicionar uma nova Fruteira e um botão com ícone "+" - botaoDeCadastro. Ambos são implementados dentro de uma div intuitiva -
+    abaDeCadastroDeFruteiras -, para melhor compreensão prévia das etapas necessárias para o cadastro de uma nova Fruteira.
+
+    Semanticamente: Um texto informativo é convidativo e expressivo quanto a fácil utilização de uma página, principalmente quando
+    facilita o acesso ao botão clicável - botaoDeCadastro - para adicionar a nova Fruteira, facilitando as ações e poupando tempo do
+    usuário.
+    -->
     <div id="abaDeCadastroDeFruteiras" class="container mt-4">
         <div id="caixaDeTextoDoCadastroDeFruteiras" class="card shadow-sm">
             <div class="card-body d-flex justify-content-between align-items-start">
@@ -68,7 +96,20 @@
         </div>
     </div>
 
-    <!-- Modal de Cadastro -->
+    <!-- Modal de Cadastro 
+    
+    Sintaticamente: "Gera", quando o botão de cadastro é clicado, o modal - modal fade - de visualização e preenchimento das informações
+    necessárias para o cadastro de uma nova Fruteira, utilizando de um modelo de Modal do Bootstrap, no qual apenas um pequeno "campo"
+    é exibido, deixando o resto da página como fundo, escurecendo-a levemente. Os campos de preenchimento das informações são compostos
+    por pequenos espaços de entradas de dados - input -, os quais recebem os dados dos tipos "text", "number", "date" e "file",
+    dependendo do campo da informação solicitada (sendo a imagem - imagem - a única informação opcional a ser preenchida).
+
+    Semanticamente: O objetivo é fazer com que o usuário preencha as informações o mais breve possível, visando otimização de tempo
+    e para evitar possíveis imprevistos, sendo da forma mais agradável para o mesmo e sem gerar a sensação de "esquecimento" de qualquer
+    dado necessário para o cadastro de uma nova Fruteita. Além disso, a possibilidade de adicionar uma imagem para ilustrar a Fruteira
+    incrementa à experiência do usuário, que se vê em um ambiente onde, além de informações, pode ilustrar sua "atividade" e 
+    "participação" na página.
+    -->
     <div class="modal fade" id="modalDeCadastrarFruteiras" tabindex="-1" aria-labelledby="modalDeCadastrarFruteirasLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -110,13 +151,31 @@
         </div>
     </div>
 
-    <!-- Cards de Fruteiras Cadastradas -->
+    <!-- Cards de Fruteiras Cadastradas 
+    
+    Sintaticamente: Container - container mt-5 - para organizar os cards na página em duas divisões horizontais, que vão inserindo
+    os novos cards verticalmente, sendo separado apenas pelo título - titutoDaAbaDeFruteiras -, explicitando a parte da página em que os
+    cards serão exibidos na página. Esse é o "campo" em que o Javascript irá introduzir os cards com as informações das Fruteiras e que,
+    quando uma Fruteira for pesquisada na Caixa de Pesquisa - caixaDePesquisa -, a página "conduzirá" a exibição para o Contatiner -
+    container mt-5 -, com uma fina linha verde rodeando as bordas do card correspondente a Fruteira que foi pesquisada.
+
+    Semanticamente: Visando uma organização padronizada e uma leitura simples e objetiva dos cards com as informações das Fruteiras,
+    o Container - container mt-5 - organiza todos os cards em agrupamentos de dois, listados horizontalmente, cujos novos cards vão
+    sendo adicionados abaixo, quando uma "linha horizontal de dois cards" é preenchida.
+    -->
     <div class="container mt-5">
         <h2 id="titutoDaAbaDeFruteiras" class="texte-center mb-4">Fruteiras Cadastradas</h2>
         <div id="listaDeFruteiras" class="row"></div>
     </div>
 
-    <!-- Rodapé -->
+    <!-- Rodapé 
+    
+    Sintaticamente: Acrescenta o Rodapé - RodapeDaPaginaPrincipal - na página principal, para créditos ao criador da página e um link
+    de acesso, com a exibição da URL da página principal, utilizando um modelo baseado em Footer do Bootstrap.
+
+    Semanticamente: A rolagem até o final da página é comumente alcançada após buscas mais aprofundadas ou fins de pesquisas, com isso,
+    torna-se necessário a exibição/menção do criador e links de interação com a página e o autor.
+    -->
     <footer id="RodapeDaPaginaPrincipal" class="bg-body-tertiary text-center text-lg-start">
         <div id="espacoInternoDoRodape" class="text-center p-3" >
             <a class="text-body" href="">CampoDasFrutas.com</a>
